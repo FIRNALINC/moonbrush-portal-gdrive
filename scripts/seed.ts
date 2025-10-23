@@ -16,7 +16,11 @@ async function main() {
   // 2. Create Admin User
   const adminUser = await prisma.user.upsert({
     where: { email: "admin@moonbrush.ai" },
-    update: {},
+    // THIS 'update' BLOCK IS THE FIX
+    update: {
+      password: hashedPassword,
+      role: Role.ADMIN,
+    },
     create: {
       email: "admin@moonbrush.ai",
       name: "Moonbrush Admin",
@@ -25,7 +29,7 @@ async function main() {
     },
   })
 
-  // 3. LINK Admin to Moonbrush (The missing step!)
+  // 3. LINK Admin to Moonbrush
   await prisma.membership.upsert({
     where: {
       userId_organizationId: {
@@ -50,7 +54,11 @@ async function main() {
   // 5. Create Client User
   const clientUser = await prisma.user.upsert({
     where: { email: "client@acme.com" },
-    update: {},
+    // THIS 'update' BLOCK IS THE FIX
+    update: {
+      password: hashedPassword,
+      role: Role.CLIENT,
+    },
     create: {
       email: "client@acme.com",
       name: "Acme Client",
@@ -59,7 +67,7 @@ async function main() {
     },
   })
 
-  // 6. LINK Client to Acme (The other missing step!)
+  // 6. LINK Client to Acme
   await prisma.membership.upsert({
     where: {
       userId_organizationId: {
@@ -74,7 +82,7 @@ async function main() {
     },
   })
 
-  console.log(`Seeded: { admin: '${adminUser.email}', client: '${clientUser.email}' }`)
+  console.log(`Seeded & Fixed: { admin: '${adminUser.email}', client: '${clientUser.email}' }`)
 }
 
 main()
