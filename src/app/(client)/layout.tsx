@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header"
-import { getSession } from "@/lib/session"
+import { getServerSession } from "next-auth/next" // Import from next-auth/next
+import { authOptions } from "@/lib/auth"          // Import your authOptions
 import { redirect } from "next/navigation"
 
 export default async function ClientLayout({
@@ -7,7 +8,7 @@ export default async function ClientLayout({
 }: {
   children: React.ReactNode
 }) {
-  const session = await getSession()
+  const session = await getServerSession(authOptions) // Call getServerSession with authOptions
   if (!session || !session.user) {
     redirect("/login")
   }
