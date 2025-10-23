@@ -1,35 +1,87 @@
-import { prisma } from "../src/lib/prisma"
+import { PrismaClient, Role } from "@prisma/client"
 import bcrypt from "bcryptjs"
 
+const prisma = new PrismaClient()
+
 async function main() {
-  const org = await prisma.organization.upsert({
-    where: { id: "org_acme" },
+  const hashedPassword = bcrypt.hashSync("password123", 10)
+
+  // 1. Create Moonbrush Org
+  const moonbrushOrg = await prisma.organization.upsert({
+    where: { name: "Moonbrush" },
     update: {},
-    create: { id: "org_acme", name: "Acme Co." }
+    create: { name: "Moonbrush" },
   })
 
-  const adminPass = await bcrypt.hash("Admin!12345", 10)
-  const clientPass = await bcrypt.hash("Client!12345", 10)
-
-  const admin = await prisma.user.upsert({
+  // 2. Create Admin User
+  const adminUser = await prisma.user.upsert({
     where: { email: "admin@moonbrush.ai" },
     update: {},
-    create: { email: "admin@moonbrush.ai", password: adminPass, name: "Moonbrush Admin", role: "ADMIN" }
+    create: {
+      email: "admin@moonbrush.ai",
+      name: "Moonbrush Admin",
+      password: hashedPassword,
+      role: Role.ADMIN,
+    },
   })
 
-  const client = await prisma.user.upsert({
+  // 3. LINK Admin to Moonbrush (The missing step!)
+  await prisma.membership.upsert({
+    where: {
+      userId_organizationId: {
+        userId: adminUser.id,
+        organizationId: moonbrushOrg.id,
+      },
+    },
+    update: {},
+    create: {
+      userId: adminUser.id,
+      organizationId: moonbrushOrg.id,
+    },
+  })
+
+  // 4. Create Acme Org
+  const acmeOrg = await prisma.organization.upsert({
+    where: { name: "Acme Corp" },
+    update: {},
+    create: { name: "Acme Corp" },
+  })
+
+  // 5. Create Client User
+  const clientUser = await prisma.user.upsert({
     where: { email: "client@acme.com" },
     update: {},
-    create: { email: "client@acme.com", password: clientPass, name: "Acme Client", role: "CLIENT" }
+    create: {
+      email: "client@acme.com",
+      name: "Acme Client",
+      password: hashedPassword,
+      role: Role.CLIENT,
+    },
   })
 
+  // 6. LINK Client to Acme (The other missing step!)
   await prisma.membership.upsert({
-    where: { userId_organizationId: { userId: client.id, organizationId: org.id } },
+    where: {
+      userId_organizationId: {
+        userId: clientUser.id,
+        organizationId: acmeOrg.id,
+      },
+    },
     update: {},
-    create: { userId: client.id, organizationId: org.id }
+    create: {
+      userId: clientUser.id,
+      organizationId: acmeOrg.id,
+    },
   })
 
-  console.log("Seeded:", { admin: admin.email, client: client.email })
+  console.log(`Seeded: { admin: '${adminUser.email}', client: '${clientUser.email}' }`)
 }
 
-main().then(()=>process.exit(0)).catch(e=>{ console.error(e); process.exit(1) })
+main()
+  .catch(async (e) => {
+    console.error(e)
+    process.exit(1)
+  })
+  .finally(async () => {
+    await prisma.$disconnect()
+  })
