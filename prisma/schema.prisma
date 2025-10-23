@@ -26,7 +26,7 @@ enum FileKind {
 
 model Organization {
   id        String       @id @default(cuid())
-  name      String
+  name      String       @unique
   users     Membership[]
   requests  Request[]
   createdAt DateTime     @default(now())
