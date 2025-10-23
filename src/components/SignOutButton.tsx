@@ -1,7 +1,7 @@
 "use client"
 
 import { signOut } from "next-auth/react"
-import { Button } from "./Button"
+import { Button } from "@/components/Button"
 
 export function SignOutButton() {
   return (
