@@ -1,7 +1,7 @@
 "use client"
 
 import { signOut } from "next-auth/react"
-import { Button } from "@/components/Button"
+import { Button } from "./Button" // Use relative path again
 
 export function SignOutButton() {
   return (
