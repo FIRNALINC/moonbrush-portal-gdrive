@@ -1,0 +1,122 @@
+ref_code,section,field_name,field_description,option,option_decription
+,,,,,
+A0001,Messaging & Positioning,messaging_angle,primary framing to lead with,value,Highlight practical savings or cost efficiency as the main driver.
+A0002,Messaging & Positioning,messaging_angle,primary framing to lead with,risk_reversal,"Reassure with guarantees, free returns, or safety nets to reduce hesitation."
+A0003,Messaging & Positioning,messaging_angle,primary framing to lead with,expert_led,Lead with endorsements or advice from trusted experts or specialists.
+A0004,Messaging & Positioning,messaging_angle,primary framing to lead with,authority_led,"Emphasize credibility from institutions, certifications, or official backing."
+A0005,Messaging & Positioning,messaging_angle,primary framing to lead with,convenience,"Promote ease, speed, or effortlessness as the key benefit."
+A0006,Messaging & Positioning,messaging_angle,primary framing to lead with,community,"Appeal to belonging, shared identity, or social proof."
+A0007,Messaging & Positioning,messaging_angle,primary framing to lead with,innovation,"Position the offering as cutting-edge, new, or trend-setting."
+,,,,,
+A0008,Messaging & Positioning,content_depth,how deep the content should go,short,"Quick-hit content that delivers the core message in a simple, skimmable way."
+A0009,Messaging & Positioning,content_depth,how deep the content should go,medium,Balanced detail that explains key points without overwhelming the audience.
+A0010,Messaging & Positioning,content_depth,how deep the content should go,deep,"Comprehensive coverage that dives into nuances, background, and full context."
+,,,,,
+A0011,Messaging & Positioning,creative_formats,top creative formats to use,coupon_code_reveal,Engage with a surprise or exclusive discount reveal to drive immediate action.
+A0012,Messaging & Positioning,creative_formats,top creative formats to use,comparison_chart,Show side-by-side benefits or pricing versus competitors for clarity.
+A0013,Messaging & Positioning,creative_formats,top creative formats to use,testimonial,Feature real customer stories or quotes to build trust and credibility.
+A0014,Messaging & Positioning,creative_formats,top creative formats to use,short_video,"Deliver quick, engaging video snippets to capture attention fast."
+A0015,Messaging & Positioning,creative_formats,top creative formats to use,carousel_compare,Use swipeable visuals to compare multiple options or features at a glance.
+A0016,Messaging & Positioning,creative_formats,top creative formats to use,how_to_guide,Provide step-by-step instructions to educate and position as helpful.
+A0017,Messaging & Positioning,creative_formats,top creative formats to use,ugc,Leverage user-generated content to highlight authenticity and social proof.
+,,,,,
+A0018,Messaging & Positioning,cta_style,call-to-action tone / aggressiveness,soft_nurture,Gently invite the audience to learn more or explore without pressure.
+A0019,Messaging & Positioning,cta_style,call-to-action tone / aggressiveness,proof_then_action,"Present evidence or benefits first, then guide the audience toward the next step."
+A0020,Messaging & Positioning,cta_style,call-to-action tone / aggressiveness,direct_buy_now,"Push for immediate purchase or sign-up with strong, urgent language."
+,,,,,
+A0021,Messaging & Positioning,trust_proof,proof types to feature,peer_reviews,Highlight ratings or feedback from other customers to build credibility.
+A0022,Messaging & Positioning,trust_proof,proof types to feature,guarantee_returns,"Show refund, warranty, or return guarantees to reduce purchase risk."
+A0023,Messaging & Positioning,trust_proof,proof types to feature,expert_endorsement,Feature approval or recommendations from trusted experts or specialists.
+A0024,Messaging & Positioning,trust_proof,proof types to feature,authority_cert,"Display official certifications, seals, or institutional backing."
+A0025,Messaging & Positioning,trust_proof,proof types to feature,ugc_social,"Showcase authentic posts, photos, or videos from real customers on social platforms."
+,,,,,
+A0026,Messaging & Positioning,emotional_driver,core psychological motivator to emphasize,security,"Highlight stability, safety, and protection from risk or uncertainty."
+A0027,Messaging & Positioning,emotional_driver,core psychological motivator to emphasize,status,"Appeal to prestige, exclusivity, or social standing as the driver."
+A0028,Messaging & Positioning,emotional_driver,core psychological motivator to emphasize,novelty,"Emphasize newness, innovation, or trend-setting appeal."
+A0029,Messaging & Positioning,emotional_driver,core psychological motivator to emphasize,belonging,"Stress community, shared identity, or social connection."
+A0030,Messaging & Positioning,emotional_driver,core psychological motivator to emphasize,savings,"Focus on financial efficiency, deals, or cost-conscious value."
+A0031,Messaging & Positioning,emotional_driver,core psychological motivator to emphasize,ethics,"Lead with sustainability, fairness, or values-based framing."
+A0032,Messaging & Positioning,objection_barrier,likely hesitation or resistance point,financial_risk,"Concerns about overspending, debt, or affordability."
+A0033,Messaging & Positioning,objection_barrier,likely hesitation or resistance point,privacy_concern,"Worries about data sharing, surveillance, or tracking."
+A0034,Messaging & Positioning,objection_barrier,likely hesitation or resistance point,subscription_commitment,Reluctance to join long-term or recurring programs.
+A0035,Messaging & Positioning,objection_barrier,likely hesitation or resistance point,skepticism,"Doubt about claims, reviews, or brand authenticity."
+A0036,Messaging & Positioning,objection_barrier,likely hesitation or resistance point,authority_defiance,Resistance toward institutional or authoritative sources.
+A0037,Messaging & Positioning,objection_barrier,likely hesitation or resistance point,effort_barrier,"Perception that adoption, sign-up, or usage is too much work."
+A0038,Messaging & Positioning,message_tone,overall personality and voice of messaging,rational,"Communicate with logic, data, and clear reasoning."
+,,,,,
+A0039,Messaging & Positioning,message_tone,overall personality and voice of messaging,emotive,"Appeal to feelings, sentiment, or emotional resonance."
+A0040,Messaging & Positioning,message_tone,overall personality and voice of messaging,aspirational,"Inspire with vision, goals, or positive future outcomes."
+A0041,Messaging & Positioning,message_tone,overall personality and voice of messaging,values_driven,"Frame messages around ethics, identity, or principles."
+A0042,Messaging & Positioning,message_tone,overall personality and voice of messaging,playful,"Use humor, lightness, or casual personality to engage."
+A0043,Messaging & Positioning,message_tone,overall personality and voice of messaging,serious,"Convey professionalism, urgency, or gravity of topic."
+,,,,,
+A0044,Channels & Platforms,best_channels,priority distribution channels,email,Use personalized emails to deliver targeted offers and nurture relationships.
+A0045,Channels & Platforms,best_channels,priority distribution channels,sms,"Send timely, direct text messages for urgent or high-response campaigns."
+A0046,Channels & Platforms,best_channels,priority distribution channels,paid_social,Leverage paid ads on social platforms to reach specific audience segments.
+A0047,Channels & Platforms,best_channels,priority distribution channels,search,Capture high-intent prospects through paid or organic search visibility.
+A0048,Channels & Platforms,best_channels,priority distribution channels,display,Build awareness with banner or visual ads across websites and apps.
+A0049,Channels & Platforms,best_channels,priority distribution channels,affiliate,Drive conversions through partner promotions and referral networks.
+A0050,Channels & Platforms,best_channels,priority distribution channels,in_app,Engage users directly within a mobile app environment with contextual prompts.
+,,,,,
+A0051,Channels & Platforms,device_priority,primary device context,mobile,"Design for on-the-go engagement with quick, thumb-friendly interactions."
+A0052,Channels & Platforms,device_priority,primary device context,desktop,"Optimize for longer sessions, detailed content, and workday browsing."
+A0053,Channels & Platforms,device_priority,primary device context,balanced,Ensure a smooth experience across both mobile and desktop without preference.
+,,,,,
+A0054,Channels & Platforms,platform_priority,social platforms to prioritize,tiktok,"Focus on short, viral video content that taps into trends and fast engagement."
+A0055,Channels & Platforms,platform_priority,social platforms to prioritize,instagram,"Leverage visuals, stories, and reels to inspire and build brand lifestyle appeal."
+A0056,Channels & Platforms,platform_priority,social platforms to prioritize,facebook,Reach broad demographics with community-driven posts and targeted ads.
+A0057,Channels & Platforms,platform_priority,social platforms to prioritize,youtube,"Use long-form or mid-length video to educate, entertain, and build authority."
+A0058,Channels & Platforms,platform_priority,social platforms to prioritize,reddit,Engage niche communities with authentic discussions and helpful content.
+A0059,Channels & Platforms,platform_priority,social platforms to prioritize,twitter/x,"Deliver timely, concise messages that ride news cycles and spark conversation."
+,,,,,
+A0060,Channels & Platforms,interaction_mode,preferred level of interactivity,static_content,Engages best with one-way formats like articles or videos.
+A0061,Channels & Platforms,interaction_mode,preferred level of interactivity,interactive,Responds well to two-way engagement like polls or quizzes.
+A0062,Channels & Platforms,interaction_mode,preferred level of interactivity,gamified,"Motivated by challenges, rewards, or points-based systems."
+,,,,,
+A0063,Offers & Incentives,offer_type,default incentive structure,percent_off,Provide a percentage discount to make savings clear and motivating.
+A0064,Offers & Incentives,offer_type,default incentive structure,cash_coupon,Offer a fixed cash-value coupon to drive immediate redemption.
+A0065,Offers & Incentives,offer_type,default incentive structure,bundle,Encourage larger purchases by combining products/services at a deal price.
+A0066,Offers & Incentives,offer_type,default incentive structure,free_shipping,"Remove friction by covering delivery costs, boosting checkout conversion."
+A0067,Offers & Incentives,offer_type,default incentive structure,free_trial,Let customers experience the product risk-free before committing.
+A0068,Offers & Incentives,offer_type,default incentive structure,loyalty_points,Reward purchases with points that build toward future discounts or perks.
+,,,,,
+A0069,Offers & Incentives,incentive_floor_pct,typical minimum discount (or blank),5%,A light discount to nudge action without cutting deeply into margins.
+A0070,Offers & Incentives,incentive_floor_pct,typical minimum discount (or blank),10%,A standard entry-level discount that feels meaningful but sustainable.
+A0071,Offers & Incentives,incentive_floor_pct,typical minimum discount (or blank),12%,A slightly stronger incentive to stand out from common 10% offers.
+A0072,Offers & Incentives,incentive_floor_pct,typical minimum discount (or blank),15%,A mid-range discount that balances urgency with profitability.
+A0073,Offers & Incentives,incentive_floor_pct,typical minimum discount (or blank),20%,A compelling savings level that drives stronger conversion rates.
+A0074,Offers & Incentives,incentive_floor_pct,typical minimum discount (or blank),25%,A high-impact discount designed for promotions or clearance pushes.
+A0075,Offers & Incentives,incentive_floor_pct,typical minimum discount (or blank),NULL,No set discount; promotions may vary or rely on non-discount incentives.
+,,,,,
+A0076,Exposure & Cadence,frequency_cap_per_week,suggested weekly impression cap,3,Keep exposure light to avoid fatigue while maintaining awareness.
+A0077,Exposure & Cadence,frequency_cap_per_week,suggested weekly impression cap,4,Provide steady visibility without overwhelming the audience.
+A0078,Exposure & Cadence,frequency_cap_per_week,suggested weekly impression cap,5,Balance repetition and recall with moderate ad pressure.
+A0079,Exposure & Cadence,frequency_cap_per_week,suggested weekly impression cap,6,Increase touchpoints to stay top-of-mind for active prospects.
+A0080,Exposure & Cadence,frequency_cap_per_week,suggested weekly impression cap,7,"Reach audiences daily for strong recall, best for short campaigns."
+A0081,Exposure & Cadence,frequency_cap_per_week,suggested weekly impression cap,8,Apply heavier exposure to reinforce urgency or time-sensitive offers.
+A0082,Exposure & Cadence,frequency_cap_per_week,suggested weekly impression cap,9,"Push high repetition to saturate attention, with some fatigue risk."
+A0083,Exposure & Cadence,frequency_cap_per_week,suggested weekly impression cap,10,"Maximize impressions for dominance in-market, often at the cost of efficiency."
+,,,,,
+A0084,Exposure & Cadence,repetition_span_days,campaign span for reinforcement,7,"Short, high-intensity reinforcement best for flash sales or urgent offers."
+A0085,Exposure & Cadence,repetition_span_days,campaign span for reinforcement,14,Two-week cycle that balances urgency with enough exposure for recall.
+A0086,Exposure & Cadence,repetition_span_days,campaign span for reinforcement,21,Three-week span to sustain engagement without losing momentum.
+A0087,Exposure & Cadence,repetition_span_days,campaign span for reinforcement,28,Full-month reinforcement for consistent presence and long-term impact.
+,,,,,
+A0088,Exposure & Cadence,daypart_focus,times of day to emphasize,morning,"Reach audiences as they start their day, ideal for news, routines, or productivity messages."
+A0089,Exposure & Cadence,daypart_focus,times of day to emphasize,midday,Engage during lunch or work breaks when attention shifts to quick browsing.
+A0090,Exposure & Cadence,daypart_focus,times of day to emphasize,evening,Target relaxation hours when people are more open to shopping and entertainment.
+A0091,Exposure & Cadence,daypart_focus,times of day to emphasize,late_night,Capture night owls or impulse shoppers browsing outside typical hours.
+,,,,,
+A0092,Exposure & Cadence,weekday_vs_weekend_focus,bias toward days,weekdays,Focus on workweek engagement when audiences are in routine and responsive to practical offers.
+A0093,Exposure & Cadence,weekday_vs_weekend_focus,bias toward days,weekend,Prioritize leisure-time browsing when people are more relaxed and open to exploration or indulgence.
+A0094,Exposure & Cadence,weekday_vs_weekend_focus,bias toward days,balanced,Maintain steady presence across the week without favoring weekdays or weekends.
+,,,,,
+A0095,Exposure & Cadence,rfw_window_bucket,retargeting recency/frequency window,3d,Retarget only the freshest visitors for immediate recall and quick conversions.
+A0096,Exposure & Cadence,rfw_window_bucket,retargeting recency/frequency window,7d,Capture recent interest within a week to keep momentum strong.
+A0097,Exposure & Cadence,rfw_window_bucket,retargeting recency/frequency window,14d,Stay visible to mid-term prospects who may need more time to decide.
+A0098,Exposure & Cadence,rfw_window_bucket,retargeting recency/frequency window,30d,Maintain a long tail of visibility for slower decision cycles or high-consideration purchases.
+,,,,,
+A0099,Exposure & Cadence,message_progression,how messaging should evolve over time,repeat_core,Reinforce the same core message consistently across touchpoints.
+A0100,Exposure & Cadence,message_progression,how messaging should evolve over time,escalate_urgency,Increase urgency over time to drive quicker action.
+A0101,Exposure & Cadence,message_progression,how messaging should evolve over time,sequential_storytelling,Deliver messages in a stepwise narrative sequence.
+A0102,Exposure & Cadence,message_progression,how messaging should evolve over time,educational_nurture,"Build knowledge gradually with informative, layered content."

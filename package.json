@@ -1,0 +1,44 @@
+{
+  "name": "moonbrush-portal-gdrive",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "prisma:push": "prisma db push",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "tsx scripts/seed.ts",
+    "ingest:catalog": "tsx scripts/ingest-catalog.ts",
+    "archive:old": "tsx scripts/archiveOldFiles.ts"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "next-auth": "^4.24.6",
+    "@prisma/client": "^5.22.0",
+    "prisma": "^5.22.0",
+    "zod": "^3.23.8",
+    "bcryptjs": "^2.4.3",
+    "fuse.js": "^6.6.2",
+    "pino": "^8.17.2",
+    "date-fns": "^3.6.0",
+    "uuid": "^9.0.1",
+    "clsx": "^2.1.1",
+    "googleapis": "^131.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.5",
+    "@types/bcryptjs": "^2.4.6",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.13",
+    "autoprefixer": "^10.4.19",
+    "tsx": "^4.16.2"
+  }
+}

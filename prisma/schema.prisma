@@ -1,0 +1,98 @@
+generator client { provider = "prisma-client-js" }
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role { CLIENT ADMIN }
+enum RequestStatus { SUBMITTED IN_PROGRESS DELAYED COMPLETE }
+enum FileKind { CSV PDF }
+
+model Organization {
+  id          String    @id @default(cuid())
+  name        String
+  users       Membership[]
+  requests    Request[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model User {
+  id               String    @id @default(cuid())
+  email            String    @unique
+  password         String
+  name             String?
+  role             Role
+  memberships      Membership[]
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  requests         Request[]          @relation("UserRequests")
+  statusChanges    StatusChange[]     @relation("UserStatusChanges")
+  adminNotes       AdminNote[]        @relation("UserAdminNotes")
+  fulfillmentFiles FulfillmentFile[]  @relation("UserFulfillmentFiles")
+}
+
+model Membership {
+  id             String        @id @default(cuid())
+  user           User          @relation(fields: [userId], references: [id])
+  userId         String
+  organization   Organization  @relation(fields: [organizationId], references: [id])
+  organizationId String
+  @@unique([userId, organizationId])
+}
+
+model Request {
+  id             String        @id @default(cuid())
+  title          String
+  clientQuery    String?
+  criteria       Json
+  status         RequestStatus @default(SUBMITTED)
+  organization   Organization  @relation(fields: [organizationId], references: [id])
+  organizationId String
+  createdBy      User          @relation("UserRequests", fields: [createdById], references: [id])
+  createdById    String
+  aiSql          String?
+  submittedAt    DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  statusHistory  StatusChange[]
+  adminNotes     AdminNote[]
+  files          FulfillmentFile[]
+}
+
+model StatusChange {
+  id          String        @id @default(cuid())
+  request     Request       @relation(fields: [requestId], references: [id])
+  requestId   String
+  from        RequestStatus?
+  to          RequestStatus
+  note        String?
+  changedBy   User          @relation("UserStatusChanges", fields: [changedById], references: [id])
+  changedById String
+  createdAt   DateTime      @default(now())
+}
+
+model AdminNote {
+  id          String   @id @default(cuid())
+  request     Request  @relation(fields: [requestId], references: [id])
+  requestId   String
+  body        String
+  createdBy   User     @relation("UserAdminNotes", fields: [createdById], references: [id])
+  createdById String
+  createdAt   DateTime @default(now())
+}
+
+model FulfillmentFile {
+  id             String   @id @default(cuid())
+  request        Request  @relation(fields: [requestId], references: [id])
+  requestId      String
+  kind           FileKind
+  storageKey     String   // Google Drive fileId (or local path)
+  filename       String
+  size           Int
+  mimeType       String
+  uploadedBy     User     @relation("UserFulfillmentFiles", fields: [uploadedById], references: [id])
+  uploadedById   String
+  availableUntil DateTime
+  createdAt      DateTime @default(now())
+}
