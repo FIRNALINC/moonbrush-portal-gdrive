@@ -1,16 +1,28 @@
-import Link from "next/link"
-import Card from "@/components/Card"
+import { redirect } from "next/navigation"
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "@/lib/auth"
+import { Role } from "@prisma/client"
 
-export default function Home() {
-  return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-semibold">Moonbrush Data Request Portal</h1>
-      <Card>
-        <p>This is a fresh Google Drive–backed build aligned to your SRS. Please sign in to continue.</p>
-        <div className="mt-4 flex gap-2">
-          <Link className="btn" href="/login">Sign in</Link>
-        </div>
-      </Card>
-    </div>
-  )
+export default async function Home() {
+  const session = await getServerSession(authOptions)
+
+  if (!session || !session.user) {
+    redirect("/login")
+  }
+
+  // Check user role from the session and redirect
+  // Note: We cast session.user.role to Role because NextAuth types are generic
+  switch (session.user.role as Role) {
+    case "ADMIN":
+      redirect("/admin/queue")
+      break
+    case "CLIENT":
+      redirect("/dashboard")
+      break
+    default:
+      // Fallback in case user has session but no recognized role
+      redirect("/login")
+  }
+
+  return null
 }
