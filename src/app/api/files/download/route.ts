@@ -23,5 +23,5 @@ export async function GET(req: Request) {
   if (new Date() > file.availableUntil) return new NextResponse("Expired", { status: 410 })
 
   const { buffer, filename, mimeType } = await getFileBuffer(file.storageKey)
-  return new NextResponse(buffer, { headers: { "Content-Type": mimeType, "Content-Disposition": `attachment; filename="${filename}"` } })
+  return new NextResponse(buffer as Uint8Array, { headers: { "Content-Type": mimeType, "Content-Disposition": `attachment; filename="${filename}"` } })
 }
